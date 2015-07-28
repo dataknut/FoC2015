@@ -76,8 +76,10 @@ merge 1:1 wd13nm lad13nm using "$oroot/data/London-ward-crime-extract.dta", gen(
 * check for mis-matches
 tab foc_merge wards_needed, mi
 * as we'd expect many wards (in rest of Eng & Wales) don't match
-* but some of the ones we want don't match either. Could be a naming issue? Or the police data use some non-standard ward names?
+* but 26 of the ones we want don't match either. Could be a naming issue? Or the police data use some non-standard ward names?
 * this could well happen if they need to aggregate data to avoid disclosure
+
+* this suggests there are 629 wards in that crime dataset...
 
 * manual checking needed!?
 
