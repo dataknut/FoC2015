@@ -1,7 +1,7 @@
 /*
 **************************************************************
 
-Code to more or less calculate centroids of UK wards
+STATA code to more or less calculate centroids of England & Wales wards (2013 wards)
 
 In support of #FoC2015: http://festival.yrs.io/
 
@@ -34,7 +34,7 @@ duplicates report wd13nm lad13nm
 
 save "$oroot/data/London-ward-crime-extract.dta", replace // for later
 
-* load OA level look up table sourced from
+* load OA level look up table sourced from ONS at:
 * https://t.co/46XP57Vqms
 insheet using "$droot/Output_areas_(2011)_to_wards_(2013)_to_local_authority_districts_(2013)_E+W_lookup/OA11_WD13_LAD13_EW_LU.csv", comma clear
 
@@ -44,7 +44,7 @@ li in 1/5
 * save it
 save "$droot/Output_areas_(2011)_to_wards_(2013)_to_local_authority_districts_(2013)_E+W_lookup/OA11_WD13_LAD13_EW_LU.dta", replace
 
-* load the OA level weighted population estimates sourced from:
+* load the OA level weighted population estimates sourced from ONS at:
 * http://t.co/Rks8ACzepZ
 * (it has OA centroids)
 use "$droot/Output_areas_(E+W)_2011_Population_Weighted_Centroids_V2/OA_2011_EW_PWC_COORD_V2.dta", clear
