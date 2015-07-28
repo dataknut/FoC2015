@@ -83,7 +83,7 @@ tab foc_merge wards_needed, mi
 
 * manual checking needed!?
 
-* keep the ones we wanted - soem will have no lat long
+* keep the ones we wanted - some will have no lat long
 keep if wards_needed == 1
 
 li if wd13nm == "Abbey"
