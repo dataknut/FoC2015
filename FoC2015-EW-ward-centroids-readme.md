@@ -1,6 +1,6 @@
 # England & Wales ward centroids
 
-Request for help from @JakeSully123456 via #FoCSOS #FoC2015
+Request for help from twitter.com/JakeSully123456/status/625968297327112192 via #FoCSOS #FoC2015
 
 NB: OA = census Output Area which covers c 100 households or c. 10 postcodes
 
@@ -18,4 +18,6 @@ Logic is:
 Hope that:
  * the ward names are (mostly) the same!
 
-The accompanying STATA .do file implements this & it (mostly) works, @JakeSully123456 may have a different (& better) solution
+The accompanying STATA .do file implements this & it (mostly) works. You could do it in R or whatever.
+
+@JakeSully123456 may have a different (& better) solution :-)
