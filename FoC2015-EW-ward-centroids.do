@@ -36,8 +36,9 @@ duplicates report wd13nm lad13nm
 
 save "$oroot/data/London-ward-crime-extract.dta", replace // for later
 
+* NB: OA = Census Output area which covers c 100 households or c. 10 postcodes
 * load OA level look up table sourced from ONS at:
-* https://t.co/46XP57Vqms
+* https://geoportal.statistics.gov.uk/Docs/Lookups/Output_areas_(2011)_to_wards_(2013)_to_local_authority_districts_(2013)_E+W_lookup.zip
 insheet using "$droot/Output_areas_(2011)_to_wards_(2013)_to_local_authority_districts_(2013)_E+W_lookup/OA11_WD13_LAD13_EW_LU.csv", comma clear
 
 * check
@@ -47,7 +48,7 @@ li in 1/5
 save "$droot/Output_areas_(2011)_to_wards_(2013)_to_local_authority_districts_(2013)_E+W_lookup/OA11_WD13_LAD13_EW_LU.dta", replace
 
 * load the OA level weighted population estimates sourced from ONS at:
-* http://t.co/Rks8ACzepZ
+* http://www.ons.gov.uk/ons/external-links/social-media/g-m/2011-oa-population-weighted-centroids.html
 * (it has OA centroids)
 use "$droot/Output_areas_(E+W)_2011_Population_Weighted_Centroids_V2/OA_2011_EW_PWC_COORD_V2.dta", clear
 
