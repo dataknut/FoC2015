@@ -32,6 +32,8 @@ gen wards_needed = 1
 * check
 duplicates report wd13nm lad13nm
 
+* good, no duplicates
+
 save "$oroot/data/London-ward-crime-extract.dta", replace // for later
 
 * load OA level look up table sourced from ONS at:
@@ -66,14 +68,26 @@ collapse (mean) latitude longitude, by(wd13cd wd13nm lad13nm) // also keep ward 
 
 * test
 scatter latitude longitude, msize(tiny)
+* well that looks sort of like Eng & Wales
 
 * check against London wards - need to match wards inside correct LAs!
 merge 1:1 wd13nm lad13nm using "$oroot/data/London-ward-crime-extract.dta", gen(foc_merge)
 
+* check for mis-matches
 tab foc_merge wards_needed, mi
+* as we'd expect many wards (in rest of Eng & Wales) don't match
+* but some of the ones we want don't match either. Could be a naming issue? Or the police data use some non-standard ward names?
+* this could well happen if they need to aggregate data to avoid disclosure
 
+* manual checking needed!?
+
+* keep the ones we wanted - soem will have no lat long
 keep if wards_needed == 1
 
-li in 1/10
+li if wd13nm == "Abbey"
+
+* put this lat/long into
+* http://www.latlong.net/Show-Latitude-Longitude.html
+* seems to work...
 
 outsheet using "$oroot/results/EW-wards-2013-lat-long-centroids.csv", comma replace
