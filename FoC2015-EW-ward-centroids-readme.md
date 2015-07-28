@@ -1,6 +1,6 @@
 # England & Wales ward centroids
 
-Request for help from twitter.com/JakeSully123456/status/625968297327112192 via #FoCSOS #FoC2015
+Request for help from http://twitter.com/JakeSully123456/status/625968297327112192 via #FoCSOS #FoC2015
 
 NB: OA = census Output Area which covers c 100 households or c. 10 postcodes
 
