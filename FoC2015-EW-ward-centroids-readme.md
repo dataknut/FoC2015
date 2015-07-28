@@ -4,6 +4,8 @@ Request for help from @JakeSully123456 via #FoCSOS #FoC2015
 
 NB: OA = census Output Area which covers c 100 households or c. 10 postcodes
 
+The same logic will work for LSOAs, MSOAs and even Local Authorities. Much UK govt geo-data is at LSOA level...
+
 Logic is:
  * get your file of ward level data
  * get a table of Output Area level centroids from the ONS (http://www.ons.gov.uk/ons/external-links/social-media/g-m/2011-oa-population-weighted-centroids.html)
